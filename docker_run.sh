@@ -1,3 +1,6 @@
 #!/bin/sh
 
-docker run --name nginx -d -p 80:80 kindlereport/nginx
+docker run -d \
+	--name nginx \
+	-p 80:80 \
+	kindlereport/nginx
