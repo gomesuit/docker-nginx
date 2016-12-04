@@ -7,6 +7,6 @@ docker run -d \
 	-p 80:80 \
 	--link kindlereport:kindlereport \
 	--log-driver=fluentd \
-	--log-opt=fluentd-address=localhost:24224 \
-	--log-opt=fluentd-tag=docker.{{.FullID}} \
+	--log-opt fluentd-address=localhost:24224 \
+	--log-opt tag="docker.{{.FullID}}" \
 	kindlereport/nginx
